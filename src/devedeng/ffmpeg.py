@@ -302,6 +302,7 @@ class ffmpeg(devedeng.executor.executor):
             self.command_var.append("10080000")
             self.command_var.append("-ar")
             self.command_var.append("48000")
+			self.command_var.append("-max_muxing_queue_size 1024")
         elif (self.config.disc_type == "vcd"):
             vcd = True
             if not file_project.no_reencode_audio_video:
